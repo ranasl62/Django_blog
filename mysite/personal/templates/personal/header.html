@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Md. Rana Hossain</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+	<div class="container-fluid" style="min-height:95%; ">
+		<div class="row">
+			  <div class="col-sm-2">
+				  <br>
+				  <div style="text-align: center;">
+					<img src="{% static 'personal/img/profile.jpg' %}" class="responsive-img" style='max-height:100px;' alt="face">
+				  </div>
+			  </div>
+			  <div class="col-sm-10">
+				  <br>
+				  <div style="text-align: center;">
+				    <h3>Programming, Teaching, Entrepreneurship</h3>
+				  </div>
+			  </div>
+		</div><hr>
+
+		<div class="row">
+		  <div class="col-sm-2">
+		  <br>
+
+		  <br>
+		   <!-- Great, til you resize. -->
+			<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">
+			<!-- <div class="well bs-sidebar" id="sidebar" style="background-color:#fff"> -->
+			  <ul class="nav flex-column nav-pills">
+				<li class="nav-item"><a class="nav-link" href='/'>Home</a></li>
+				<li class="nav-item"><a class="nav-link" href='/blog/'>Blog</a></li>
+				<li class="nav-item"><a class="nav-link"href='/contact/'>Contact</a></li>
+			  </ul>
+			</div> <!--well bs-sidebar affix-->
+		  </div> <!--col-sm-2-->
+		  <div class="col-sm-10">
+
+			<div class='container-fluid'>
+			<br><br>
+			   {% block content %}
+			   {% endblock %}
+			</div>
+		  </div>
+		</div>
+	</div>
+	<footer>
+		<div class="container-fluid" style='margin-left:15px'>
+			<p><a href="/contact/" target="blank">Contact</a> | <a href="https://www.linkedin.com/in/md-rana-hossain-31795654/" target="blank">LinkedIn</a> | <a href="https://twitter.com/ranasl62" target="blank">Twitter</a> | <a href="https://plus.google.com/113658908413858983112" target="blank">Google+</a></p>
+		</div>
+	</footer>
+    <script type="text/javascript">
+            $(window).on('scroll', function(event) {
+                var scrollValue = $(window).scrollTop();
+                if (scrollValue == settings.scrollTopPx || scrollValue > 70) {
+             $('.navbar').addClass('fixed-top');
+    }
+});
+    </script>
+
+</body>
+
+</html>
